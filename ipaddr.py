@@ -1,10 +1,7 @@
 import subprocess  # for running external programs
-from ipaddress import IPv4Address
-# from pathlib import Path
-# import sys  # for command line arguments
+from ipaddress import IPv4Address # for converting the strings to IPV4 address
 
 # determine the class of the ip address
-
 
 def addrType(ipaddr):
     if (ipaddr.is_loopback):
@@ -41,10 +38,7 @@ def addrType(ipaddr):
             print("This is a Class C Public IP address")
             return
 
-# to hide output add command > /dev/null
-
 # ping ip read from stdout
-
 
 def pingAddr(ipaddr):
     print(f"Pinging {ipaddr}...")
@@ -62,7 +56,6 @@ def pingAddr(ipaddr):
 
 
 # run traceroute on ip and store data in a file
-
 
 def traceAddr(ipaddr):
     print(f"Counting hops to {ipaddr}")
